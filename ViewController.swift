@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
+//        self.navigationItem.hidesBackButton = true
         super.viewDidLoad()
         setupUI()
 
@@ -111,10 +112,11 @@ class ViewController: UIViewController {
     
     @IBAction func forgotPasswordTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name if different
-            if let resetPasswordVC = storyboard.instantiateViewController(withIdentifier: "ResetPasswordViewController") as? ResetPasswordViewController {
-                resetPasswordVC.modalPresentationStyle = .fullScreen // Optional: Change presentation style
-                present(resetPasswordVC, animated: true, completion: nil)
-            }
+        if let resetPasswordVC = storyboard.instantiateViewController(withIdentifier: "ResetPasswordViewController") as? ResetPasswordViewController {
+            // Push the ResetPasswordViewController onto the navigation stack
+            self.navigationController?.pushViewController(resetPasswordVC, animated: true)
+        }
+
     }
     
     @IBAction func signInTapped(_ sender: UIButton) {
@@ -135,9 +137,10 @@ class ViewController: UIViewController {
     @IBAction func registerTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name if different
         if let signUpVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
-            signUpVC.modalPresentationStyle = .fullScreen
-            present(signUpVC, animated: true, completion: nil)
+            // Push the SignUpViewController onto the navigation stack
+            self.navigationController?.pushViewController(signUpVC, animated: true)
         }
+
     }
 
 

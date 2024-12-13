@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+//        self.navigationItem.hidesBackButton = true
         setupPrivacyServiceLabel()
         emailErrorLabel.isHidden = true // Initially hide the error label
     }
@@ -153,9 +154,10 @@ class SignUpViewController: UIViewController {
             // Proceed to the "Create Password" screen
             let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name if different
             if let createPasswordVC = storyboard.instantiateViewController(withIdentifier: "CreatePasswordViewController") as? CreatePasswordViewController {
-                createPasswordVC.modalPresentationStyle = .fullScreen // Optional: Choose how the view is presented
-                self.present(createPasswordVC, animated: true, completion: nil)
+                // Push the CreatePasswordViewController onto the navigation stack
+                self.navigationController?.pushViewController(createPasswordVC, animated: true)
             }
+
         }
     }
 
@@ -179,7 +181,7 @@ class SignUpViewController: UIViewController {
         }
     }
 
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func backButton(_ sender: Any) {
+//        dismiss(animated: true, completion: nil)
+//    }
 }

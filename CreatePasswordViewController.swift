@@ -30,6 +30,7 @@ class CreatePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.hidesBackButton = true
         setupPrivacyServiceLabel()
         setupUI()
     }
@@ -191,25 +192,27 @@ class CreatePasswordViewController: UIViewController {
             // Navigate to Email Verification View
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let emailVerificationVC = storyboard.instantiateViewController(withIdentifier: "EmailVerificationViewController") as? EmailVerificationViewController {
-                emailVerificationVC.modalPresentationStyle = .fullScreen
-                self.present(emailVerificationVC, animated: true, completion: nil)
+                // Push the EmailVerificationViewController onto the navigation stack
+                self.navigationController?.pushViewController(emailVerificationVC, animated: true)
             }
+
         }
     }
     
-    @IBAction func BackTapped(_ sender: Any) {
-        if let navigationController = navigationController {
-            navigationController.popViewController(animated: true)
-        } else {
-            dismiss(animated: true, completion: nil)
-        }
-    }
+//    @IBAction func BackTapped(_ sender: Any) {
+//        if let navigationController = navigationController {
+//            navigationController.popViewController(animated: true)
+//        } else {
+//            dismiss(animated: true, completion: nil)
+//        }
+//    }
     @IBAction func SignInTapped(_ sender: Any) {
         // Assuming your ViewController has the identifier "ViewController"
         let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name if different
         if let signInVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            signInVC.modalPresentationStyle = .fullScreen // Optional: Adjust presentation style if needed
-            self.present(signInVC, animated: true, completion: nil)
+            // Push the ViewController onto the navigation stack
+            self.navigationController?.pushViewController(signInVC, animated: true)
         }
+
     }
 }

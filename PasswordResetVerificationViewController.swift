@@ -18,6 +18,7 @@ class PasswordResetVerificationViewController: UIViewController {
     var userEmail: String = "" // Dynamically set by ResetPasswordViewController
 
     override func viewDidLoad() {
+//        self.navigationItem.hidesBackButton = true
         super.viewDidLoad()
 
         // Dynamically set the description label
@@ -52,18 +53,20 @@ class PasswordResetVerificationViewController: UIViewController {
     @IBAction func backToLoginPage(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            loginVC.modalPresentationStyle = .fullScreen
-            self.present(loginVC, animated: true, completion: nil)
+            // Push the ViewController onto the navigation stack
+            self.navigationController?.pushViewController(loginVC, animated: true)
         }
+
     }
 
     @IBAction func resendEmail(_ sender: Any) {
         if let setPasswordVC = storyboard?.instantiateViewController(withIdentifier: "SetPasswordViewController") as? SetPasswordViewController {
-            setPasswordVC.modalPresentationStyle = .fullScreen
-            present(setPasswordVC, animated: true, completion: nil)
+            // Push the SetPasswordViewController onto the navigation stack
+            self.navigationController?.pushViewController(setPasswordVC, animated: true)
         } else {
             print("Error: Unable to instantiate SetPasswordViewController")
         }
+
     }
 
 }

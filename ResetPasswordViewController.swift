@@ -19,6 +19,7 @@ class ResetPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.hidesBackButton = true
 
         // Initial Setup
         setupUI()
@@ -76,14 +77,15 @@ class ResetPasswordViewController: UIViewController {
         if let verificationVC = storyboard.instantiateViewController(withIdentifier: "PasswordResetVerificationViewController") as? PasswordResetVerificationViewController {
             // Dynamically set the user's email
             verificationVC.userEmail = email
-            verificationVC.modalPresentationStyle = .fullScreen
-            self.present(verificationVC, animated: true, completion: nil)
+            // Push the PasswordResetVerificationViewController onto the navigation stack
+            self.navigationController?.pushViewController(verificationVC, animated: true)
         }
+
     }
 
-    @IBAction func backToPrevious(_ sender: Any) {
-        // Handle navigation to the previous screen
-        dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func backToPrevious(_ sender: Any) {
+//        // Handle navigation to the previous screen
+//        dismiss(animated: true, completion: nil)
+//    }
 }
 

@@ -29,6 +29,7 @@ class SetPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.hidesBackButton = true
         setupUI()
     }
 
@@ -137,12 +138,12 @@ class SetPasswordViewController: UIViewController {
 
     }
     
-    @IBAction func BackTapped(_ sender: Any) {
-        if let navigationController = navigationController {
-            navigationController.popViewController(animated: true)
-        } else {
-            dismiss(animated: true, completion: nil)
-        }
-    }
+//    @IBAction func BackTapped(_ sender: Any) {
+//        if let navigationController = self.navigationController {
+//            navigationController.popViewController(animated: true)
+//        } else {
+//            dismiss(animated: true, completion: nil)
+//        }
+//    }
 
 }

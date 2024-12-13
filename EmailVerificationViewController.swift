@@ -17,6 +17,7 @@ class EmailVerificationViewController: UIViewController {
     public let blueC = UIColor(red: 14/255, green: 115/255, blue: 189/255, alpha: 1.0)
     
     override func viewDidLoad() {
+//        self.navigationItem.hidesBackButton = true
         super.viewDidLoad()
         setupUI()
     }
@@ -41,17 +42,17 @@ class EmailVerificationViewController: UIViewController {
     
     @IBAction func resendButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let emailVerifiedVC = storyboard.instantiateViewController(withIdentifier: "EmailVerifiedViewController") as? EmailVerifiedViewController {
-                emailVerifiedVC.modalPresentationStyle = .fullScreen
-                self.present(emailVerifiedVC, animated: true, completion: nil)
+        if let emailVerifiedVC = storyboard.instantiateViewController(withIdentifier: "EmailVerifiedViewController") as? EmailVerifiedViewController {
+            // Push the EmailVerifiedViewController onto the navigation stack
+            self.navigationController?.pushViewController(emailVerifiedVC, animated: true)
         }
     }
     
     @IBAction func backToLogIn(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let loginVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            loginVC.modalPresentationStyle = .fullScreen
-            self.present(loginVC, animated: true, completion: nil)
-    }
+            // Push the ViewController onto the navigation stack
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }
     }
 }

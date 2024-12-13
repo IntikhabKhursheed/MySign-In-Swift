@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qka-pg-nLG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -112,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aSI-3d-qsq"/>
                     <connections>
                         <outlet property="emailErrorLabel" destination="kj1-nX-nSb" id="zJe-VN-A2x"/>
                         <outlet property="emailTextField" destination="prY-Z0-0Mo" id="9lK-qT-NWE"/>
@@ -128,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2268" y="88"/>
+            <point key="canvasLocation" x="-1357.9710144927537" y="87.723214285714278"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="dx9-Ju-hTL">
@@ -196,17 +197,6 @@
                                     <action selector="SignInButton:" destination="MBp-AX-aSL" eventType="touchUpInside" id="gy7-yW-kZl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xau-nm-AuY">
-                                <rect key="frame" x="31" y="44" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="right">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="backButton:" destination="MBp-AX-aSL" eventType="touchUpInside" id="VcT-u9-YJR"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zME-T5-5z4">
                                 <rect key="frame" x="31" y="577" width="353" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -240,7 +230,7 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iRr-nb-zxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1403" y="88"/>
+            <point key="canvasLocation" x="-494.20289855072468" y="87.723214285714278"/>
         </scene>
         <!--Create Password View Controller-->
         <scene sceneID="bwh-00-FPq">
@@ -331,15 +321,6 @@ Terms of Service and Privacy Policy.</string>
                                     <action selector="SignInTapped:" destination="Wrb-fc-pZk" eventType="touchUpInside" id="66e-DL-ub5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at5-fv-saR">
-                                <rect key="frame" x="29" y="44" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="right"/>
-                                <connections>
-                                    <action selector="BackTapped:" destination="Wrb-fc-pZk" eventType="touchUpInside" id="xyA-8z-d4w"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuU-NV-Lte">
                                 <rect key="frame" x="349" y="266" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -387,7 +368,7 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGY-j0-Nwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393" y="88"/>
+            <point key="canvasLocation" x="515.94202898550725" y="87.723214285714278"/>
         </scene>
         <!--Email Verification View Controller-->
         <scene sceneID="OJo-dR-nSr">
@@ -467,7 +448,7 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2P-8t-FqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="88"/>
+            <point key="canvasLocation" x="1400" y="87.723214285714278"/>
         </scene>
         <!--Email Verified View Controller-->
         <scene sceneID="fHM-cT-j1N">
@@ -516,7 +497,7 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="die-uX-8Df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="95"/>
+            <point key="canvasLocation" x="2200" y="94.419642857142847"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="7RE-FD-uYW">
@@ -526,15 +507,6 @@ Terms of Service and Privacy Policy.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4N-W3-K51">
-                                <rect key="frame" x="32" y="44" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="right"/>
-                                <connections>
-                                    <action selector="backToPrevious:" destination="hB2-iJ-gDC" eventType="touchUpInside" id="KDQ-ha-miH"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recover your Password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaR-O3-8xK">
                                 <rect key="frame" x="32" y="142" width="353" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -577,7 +549,7 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFu-sl-CxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2088" y="94"/>
+            <point key="canvasLocation" x="2997.1014492753625" y="93.75"/>
         </scene>
         <!--Password Reset Verification View Controller-->
         <scene sceneID="9j1-mg-ySF">
@@ -655,7 +627,7 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZH-fe-12i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708.6956521739135" y="93.75"/>
+            <point key="canvasLocation" x="4018.8405797101454" y="93.75"/>
         </scene>
         <!--Set Password View Controller-->
         <scene sceneID="Rmz-KL-rpX">
@@ -735,15 +707,6 @@ Terms of Service and Privacy Policy.</string>
                                     <action selector="setPassword:" destination="6ax-rC-ksC" eventType="touchUpInside" id="bAj-Kv-o85"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOL-0H-keO">
-                                <rect key="frame" x="29" y="58" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="right"/>
-                                <connections>
-                                    <action selector="BackTapped:" destination="6ax-rC-ksC" eventType="touchUpInside" id="tdx-1V-5KX"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUR-sR-EEU">
                                 <rect key="frame" x="349" y="280" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -780,25 +743,25 @@ Terms of Service and Privacy Policy.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuE-Hy-XMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4518.840579710145" y="93.75"/>
+            <point key="canvasLocation" x="4750.7246376811599" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="y8C-nl-UVU">
+        <scene sceneID="6ww-Az-A2R">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kw8-ok-ZfX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qka-pg-nLG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GCR-4Z-iz9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MS9-T0-fLM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8SI-BF-RjJ" kind="relationship" relationship="rootViewController" id="Yvs-n2-Ox4"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2O5-3d-p1D"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8tW-44-ZKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xkh-Tl-2LM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798.5507246376815" y="93.75"/>
+            <point key="canvasLocation" x="-2268.1159420289855" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
@@ -806,7 +769,6 @@ Terms of Service and Privacy Policy.</string>
         <image name="Info" width="16" height="16"/>
         <image name="Logout" width="24" height="24"/>
         <image name="logo" width="41" height="40"/>
-        <image name="right" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
